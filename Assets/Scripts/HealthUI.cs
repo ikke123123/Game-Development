@@ -15,7 +15,6 @@ public class HealthUI : MonoBehaviour
     private void Awake()
     {
         maxWidth = image.rectTransform.sizeDelta.x;
-        Debug.Log(maxWidth);
     }
 
     public void SetHealth(HealthData input)
@@ -38,6 +37,5 @@ public class HealthUI : MonoBehaviour
     private void ImageUpdate()
     {
         image.rectTransform.sizeDelta = new Vector2(CodeLibrary.Remap(healthData.Absolute, 0, 1, 0, maxWidth), image.rectTransform.sizeDelta.y);
-        Debug.Log(healthData.Absolute);
     }
 }

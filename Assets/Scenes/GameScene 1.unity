@@ -1177,6 +1177,7 @@ GameObject:
   - component: {fileID: 345857837}
   - component: {fileID: 345857836}
   - component: {fileID: 345857835}
+  - component: {fileID: 345857840}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -1202,8 +1203,8 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 758670253}
-  m_Follow: {fileID: 758670253}
+  m_LookAt: {fileID: 1939133281}
+  m_Follow: {fileID: 1939133281}
   m_Lens:
     FieldOfView: 55
     OrthographicSize: 10
@@ -1311,14 +1312,48 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 345857834}
-  m_LocalRotation: {x: -0.06471255, y: -0.9105743, z: 0.15622984, w: -0.37717226}
-  m_LocalPosition: {x: -5, y: 2.5, z: 75}
+  m_LocalRotation: {x: -0.38393986, y: 0.59379303, z: -0.38393733, w: -0.59379476}
+  m_LocalPosition: {x: 44.999996, y: 100, z: -0.000005364418}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1662877482}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &345857840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 345857834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33832faa835b59b4b92d339e161813ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraPositions:
+  - location: {fileID: 758670253}
+    viewType: 1
+    keycode: 256
+  - location: {fileID: 662708182}
+    viewType: 1
+    keycode: 257
+  - location: {fileID: 350446943}
+    viewType: 1
+    keycode: 258
+  - location: {fileID: 949244995}
+    viewType: 2
+    keycode: 259
+  - location: {fileID: 577753302}
+    viewType: 2
+    keycode: 260
+  - location: {fileID: 545908861}
+    viewType: 2
+    keycode: 261
+  - location: {fileID: 1939133281}
+    viewType: 0
+    keycode: 262
 --- !u!1 &350446938 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8938329578125089113, guid: 5de149cd115e64b48abb45ab804e796c,
@@ -6590,7 +6625,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 1
-  m_FollowOffset: {x: 5, y: 2.5, z: -5}
+  m_FollowOffset: {x: 0, y: 100, z: 45}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
