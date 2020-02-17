@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 3822741361412149073}
   - component: {fileID: 3848885088760669535}
   - component: {fileID: 3841044306149400321}
-  - component: {fileID: 8837706301303702808}
   - component: {fileID: 4116952784093918017}
+  - component: {fileID: 4095689440248439116}
+  - component: {fileID: 5076409270016230021}
   m_Layer: 0
   m_Name: Red Assassin
   m_TagString: Untagged
@@ -81,20 +82,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &8837706301303702808
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3826440941099350351}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.37795478
-  m_Height: 1.2133604
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.6066802, z: 0}
 --- !u!54 &4116952784093918017
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -107,7 +94,39 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!143 &4095689440248439116
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3826440941099350351}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 1.2
+  m_Radius: 0.37795478
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0.61, z: 0}
+--- !u!114 &5076409270016230021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3826440941099350351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fb4bc5039936ef40b3a9fdf725ea1a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 150
+  healTag: Heal Red

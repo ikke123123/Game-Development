@@ -6,12 +6,12 @@ public class InputManager : MonoBehaviour
 {
     public static bool GetEither(InputType inputType, PressType pressType = PressType.continuous)
     {
-        return Get(inputType, PlayerType.Player1, pressType) || Get(inputType, PlayerType.Player2, pressType);
+        return Get(inputType, PlayerNumber.Player1, pressType) || Get(inputType, PlayerNumber.Player2, pressType);
     }
 
-    public static bool Get(InputType inputType, PlayerType playerType, PressType pressType = PressType.continuous)
+    public static bool Get(InputType inputType, PlayerNumber playerType, PressType pressType = PressType.continuous)
     {
-        if (playerType == PlayerType.Player1)
+        if (playerType == PlayerNumber.Player1)
         {
             switch (inputType)
             {
@@ -39,7 +39,7 @@ public class InputManager : MonoBehaviour
                     return false;
             }
         }
-        if (playerType == PlayerType.Player2)
+        if (playerType == PlayerNumber.Player2)
         {
             switch (inputType)
             {

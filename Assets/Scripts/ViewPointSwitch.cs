@@ -7,6 +7,8 @@ public class ViewPointSwitch : MonoBehaviour
 {
     [SerializeField] private CameraSelection[] cameraSelection;
 
+    private CameraSelection enabledCamera;
+
     private void Awake()
     {
         DisableAll();
@@ -28,8 +30,11 @@ public class ViewPointSwitch : MonoBehaviour
 
     public void EnableCamera(int num)
     {
-        DisableAll();
-        EnableCamera(cameraSelection[Mathf.Clamp(num, 0, cameraSelection.Length)]);
+        if (enabledCamera != cameraSelection[Mathf.Clamp(num, 0, cameraSelection.Length)])
+        {
+            DisableAll();
+            EnableCamera(cameraSelection[Mathf.Clamp(num, 0, cameraSelection.Length)]);
+        }
     }
 
     public void EnableCamera(string name)
@@ -39,8 +44,12 @@ public class ViewPointSwitch : MonoBehaviour
         {
             if (cameraSelected.name.ToLower() == name)
             {
-                DisableAll();
-                EnableCamera(cameraSelected);
+                if (enabledCamera != cameraSelected)
+                {
+                    DisableAll();
+                    EnableCamera(cameraSelected);
+                }
+                return;
             }
         }
         Debug.LogWarning(name + " wasn't found.");
@@ -52,6 +61,7 @@ public class ViewPointSwitch : MonoBehaviour
         cameraSelected.audioListener.enabled = true;
         cameraSelected.cinemachineBrain.enabled = true;
         cameraSelected.virtualCamera.enabled = true;
+        enabledCamera = cameraSelected;
     }
 
     private void ToggleCamera(CameraSelection cameraSelected)

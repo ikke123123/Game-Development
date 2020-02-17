@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2287741246826749817}
   - component: {fileID: 2275865818832113217}
   - component: {fileID: 6207765832743895688}
+  - component: {fileID: 1149219147781572662}
   m_Layer: 0
   m_Name: Blue 3
   m_TagString: Untagged
@@ -94,3 +95,18 @@ CapsuleCollider:
   m_Height: 1.8011343
   m_Direction: 1
   m_Center: {x: 0, y: 0.4149871, z: 0}
+--- !u!114 &1149219147781572662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2288882800600232813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fb4bc5039936ef40b3a9fdf725ea1a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 6000
+  healTag: Heal Blue
+  healthUI: {fileID: 0}

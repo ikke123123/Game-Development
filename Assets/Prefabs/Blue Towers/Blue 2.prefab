@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 8652607821345621420}
   - component: {fileID: 8682051861132866064}
   - component: {fileID: 8671143727948423976}
+  - component: {fileID: 1180130127396043338}
+  - component: {fileID: 1364829209387459442}
   m_Layer: 0
   m_Name: Blue 2
   m_TagString: Untagged
@@ -79,3 +81,32 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &1180130127396043338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8647147025190542852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fb4bc5039936ef40b3a9fdf725ea1a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 3000
+  healTag: Heal Blue
+  healthUI: {fileID: 0}
+--- !u!136 &1364829209387459442
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8647147025190542852}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.4478585
+  m_Height: 1.8011343
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.4149871, z: 0}
