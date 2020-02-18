@@ -5,8 +5,7 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [SerializeField, Range(100, 6000)] private int hp = 100;
-    [SerializeField] private string healTag;
-    [SerializeField] private HealthUI healthUI;
+    [SerializeField] private HealthUI healthUI = null;
 
     [HideInInspector] public HealthData health = new HealthData();
 
@@ -21,31 +20,24 @@ public class Health : MonoBehaviour
         healthUI.UpdateHealth();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public void TakeDamage(float amount)
     {
-        if (collision.gameObject.CompareTag("Projectile"))
-        {
-            //Take damage upon hit. And destroy arrow.
-            //Add that stuff.
-            //health.Damage(1);
-            healthUI.UpdateHealth();
-            return;
-        }
-        if (collision.gameObject.CompareTag(healTag))
-        {
-            timer = Time.time + healSpeed;
-        }
+        //Add death script thing.
+        //health.Damage(amount);
+        healthUI.UpdateHealth();
     }
 
-    private void OnCollisionStay(Collision collision)
+    public void InitiateHeal()
     {
-        if (collision.gameObject.CompareTag(healTag))
+        timer = Time.time + healSpeed;
+    }
+
+    public void Heal()
+    {
+        if (timer <= Time.time && health.Heal() == false)
         {
-            if (timer >= Time.time && health.Heal() == false)
-            {
-                healthUI.UpdateHealth();
-                timer += healSpeed;
-            }
+            healthUI.UpdateHealth();
+            timer += healSpeed;
         }
     }
 }

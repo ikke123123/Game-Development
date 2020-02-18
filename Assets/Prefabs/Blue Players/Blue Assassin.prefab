@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1618134460455185724}
   m_Layer: 0
   m_Name: Blue Assassin
-  m_TagString: Untagged
+  m_TagString: Blue Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -129,5 +129,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 100
-  healTag: Heal Blue
   healthUI: {fileID: 0}

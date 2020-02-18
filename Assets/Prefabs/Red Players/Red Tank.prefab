@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2312568367826705619}
   m_Layer: 0
   m_Name: Red Tank
-  m_TagString: Untagged
+  m_TagString: Red Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -129,4 +129,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 500
-  healTag: Heal Red
+  healthUI: {fileID: 0}

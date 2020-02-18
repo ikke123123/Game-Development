@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7651386795747638276}
   m_Layer: 0
   m_Name: Blue Tank
-  m_TagString: Untagged
+  m_TagString: Blue Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -129,5 +129,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 600
-  healTag: Heal Blue
   healthUI: {fileID: 0}

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2712887243646263153}
   m_Layer: 0
   m_Name: Blue 1
-  m_TagString: Untagged
+  m_TagString: Blue Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,5 +108,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 1500
-  healTag: Heal Blue
   healthUI: {fileID: 0}

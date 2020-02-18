@@ -7,6 +7,10 @@ TagManager:
   - Projectile
   - Heal Blue
   - Heal Red
+  - Blue Player
+  - Red Player
+  - Red Tower
+  - Blue Tower
   layers:
   - Default
   - TransparentFX
