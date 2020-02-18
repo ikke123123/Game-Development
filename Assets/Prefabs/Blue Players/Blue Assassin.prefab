@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 685489861889123854}
   - component: {fileID: 4313142657317445956}
   - component: {fileID: 1618134460455185724}
+  - component: {fileID: 4163834434203613704}
   m_Layer: 0
   m_Name: Blue Assassin
   m_TagString: Blue Player
@@ -130,3 +131,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 100
   healthUI: {fileID: 0}
+  teamHealth: {fileID: 0}
+--- !u!114 &4163834434203613704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8529190563342153540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cc5171125204aa4fa405a6470f9a190, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20
+  team: 0

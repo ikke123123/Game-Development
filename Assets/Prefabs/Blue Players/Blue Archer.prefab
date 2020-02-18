@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8095389696883184759}
   - component: {fileID: 261632679177494328}
   - component: {fileID: 893130014926308504}
+  - component: {fileID: 249927985984631990}
   m_Layer: 0
   m_Name: Blue Archer
   m_TagString: Blue Player
@@ -130,3 +131,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 300
   healthUI: {fileID: 0}
+  teamHealth: {fileID: 0}
+--- !u!114 &249927985984631990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8938329578125089113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cc5171125204aa4fa405a6470f9a190, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 15
+  team: 0

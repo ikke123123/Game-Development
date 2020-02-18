@@ -7,7 +7,7 @@ public class CameraSwitch : MonoBehaviour
 {
     public enum ViewType { overview, blueplayer, redplayer };
 
-    [SerializeField] private CameraPosition[] cameraPositions;
+    [SerializeField] private CameraPosition[] cameraPositions = null;
 
     private CinemachineVirtualCamera virtualCamera;
 

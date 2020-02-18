@@ -7,6 +7,8 @@ public class Health : MonoBehaviour
     [SerializeField, Range(100, 6000)] private int hp = 100;
     [SerializeField] private HealthUI healthUI = null;
 
+    [HideInInspector] public TeamHealth teamHealth;
+
     [HideInInspector] public HealthData health = new HealthData();
 
     private readonly float healSpeed = 2; //Time in seconds to gain back a defined amount of health.
@@ -18,13 +20,15 @@ public class Health : MonoBehaviour
         health.Health = hp;
         healthUI.SetHealth(health);
         healthUI.UpdateHealth();
+        teamHealth.UpdateHealth();
     }
 
     public void TakeDamage(float amount)
     {
         //Add death script thing.
-        //health.Damage(amount);
+        health.Damage(amount);
         healthUI.UpdateHealth();
+        teamHealth.UpdateHealth();
     }
 
     public void InitiateHeal()
@@ -37,6 +41,7 @@ public class Health : MonoBehaviour
         if (timer <= Time.time && health.Heal() == false)
         {
             healthUI.UpdateHealth();
+            teamHealth.UpdateHealth();
             timer += healSpeed;
         }
     }

@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class HealthUI : MonoBehaviour
 {
-    [SerializeField] private Image image;
-    [SerializeField] private TextMeshProUGUI health;
+    [SerializeField] private Image image = null;
+    [SerializeField] private TextMeshProUGUI health = null;
 
     private float maxWidth;
     private HealthData healthData;

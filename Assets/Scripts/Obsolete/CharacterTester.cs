@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CharacterTester : MonoBehaviour
 {
-    [SerializeField] private float speed;
+    [SerializeField] private float speed = 0;
 
     private CharacterController characterController;
 

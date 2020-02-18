@@ -7,7 +7,7 @@ public class TeamMovement : MonoBehaviour
     private CharacterController assassin = null;
     private CharacterController archer = null;
     private CharacterController tank = null;
-    private float speed;
+    private float speed = 10;
     private Team team;
 
     private void Awake()
@@ -17,7 +17,7 @@ public class TeamMovement : MonoBehaviour
         archer = teamController.archer.GetComponent<CharacterController>();
         tank = teamController.tank.GetComponent<CharacterController>();
         team = teamController.team;
-        speed = teamController.speed;
+        //speed = teamController.speed;
         if (team == Team.blue) speed = -1 * speed;
     }
 

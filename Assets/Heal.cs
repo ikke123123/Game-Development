@@ -4,22 +4,23 @@ using UnityEngine;
 
 public class Heal : MonoBehaviour
 {
-    private List<Health> healthList = new List<Health>();
+    [SerializeField] private string objectTag = "";
 
-    private void Update()
-    {
-        
-    }
+    private List<Health> healthList = new List<Health>();
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Blue Player") && other.gameObject.GetComponent<Health>())
+        if (other.gameObject.CompareTag(objectTag))
         {
-            Health tempHealth = other.gameObject.GetComponent<Health>();
-
-
+            other.gameObject.GetComponent<Health>().InitiateHeal();
         }
     }
 
-
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.CompareTag(objectTag))
+        {
+            other.gameObject.GetComponent<Health>().Heal();
+        }
+    }
 }

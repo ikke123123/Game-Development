@@ -5,7 +5,7 @@ using Cinemachine;
 
 public class ViewPointSwitch : MonoBehaviour
 {
-    [SerializeField] private CameraSelection[] cameraSelection;
+    [SerializeField] private CameraSelection[] cameraSelection = null;
 
     private CameraSelection enabledCamera;
 

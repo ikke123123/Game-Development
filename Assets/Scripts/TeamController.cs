@@ -14,16 +14,6 @@ public class TeamController : MonoBehaviour
     [SerializeField] public GameObject tower3 = null;
     [Header("Settings")]
     [SerializeField] public Team team;
-    [SerializeField] public float speed = 10;
-
-    [HideInInspector] public TeamMovement teamMovement;
-    [HideInInspector] public TeamHealth teamHealth;
-
-    private void Awake()
-    {
-        teamMovement = GetComponent<TeamMovement>();
-        teamHealth = GetComponent<TeamHealth>();
-    }
 
     //private GameObject GetHealthData(PlayerType playerType)
     //{
