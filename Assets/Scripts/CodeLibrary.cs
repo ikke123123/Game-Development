@@ -18,8 +18,6 @@ public class CodeLibrary : MonoBehaviour
     //Remapping values (if value is 2 on a scale from 1 to 10 and you want to remap it to 1 to 20 it would be 4)
     //Delete stuff from foreach loop
 
-
-
     public static bool RectOverlap(RectTransform input, Rect rectangle)
     {
         Rect rect1 = new Rect(input.localPosition.x, input.localPosition.y, input.rect.width, input.rect.height);

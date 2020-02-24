@@ -8,6 +8,8 @@ public class HealthUI : MonoBehaviour
 {
     [SerializeField] private Image image = null;
     [SerializeField] private TextMeshProUGUI health = null;
+    [SerializeField] private Image deathBackground = null;
+    [SerializeField] private TextMeshProUGUI deathText = null;
 
     private float maxWidth;
     private HealthData healthData;
@@ -15,6 +17,7 @@ public class HealthUI : MonoBehaviour
     private void Awake()
     {
         maxWidth = image.rectTransform.sizeDelta.x;
+        SetDeath(false);
     }
 
     public void SetHealth(HealthData input)
@@ -28,6 +31,15 @@ public class HealthUI : MonoBehaviour
     {
         TextUpdate();
         ImageUpdate();
+    }
+
+    public void SetDeath(bool input)
+    {
+        deathBackground.gameObject.SetActive(input);
+    }
+    public void SetDeath(int input)
+    {
+        deathText.text = input.ToString();
     }
 
     private void TextUpdate()

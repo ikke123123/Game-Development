@@ -14,7 +14,10 @@ GameObject:
   - component: {fileID: 3273881655688699899}
   - component: {fileID: 2115511585234624110}
   - component: {fileID: 4122364087331592331}
-  m_Layer: 0
+  - component: {fileID: 496193072668982086}
+  - component: {fileID: 3571772583675007911}
+  - component: {fileID: 380329101767915338}
+  m_Layer: 8
   m_Name: Red Archer
   m_TagString: Red Player
   m_Icon: {fileID: 0}
@@ -130,3 +133,59 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 300
   healthUI: {fileID: 0}
+--- !u!114 &496193072668982086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6448278978668201385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DecisionPeriod: 10
+  RepeatAction: 1
+  offsetStep: 0
+--- !u!114 &3571772583675007911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6448278978668201385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d1c4e0b1822b495aa52bc52839ecb30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BrainParameters:
+    vectorObservationSize: 8
+    numStackedVectorObservations: 1
+    vectorActionSize: 02000000
+    vectorActionDescriptions: []
+    vectorActionSpaceType: 1
+  m_Model: {fileID: 0}
+  m_InferenceDevice: 0
+  m_BehaviorType: 0
+  m_BehaviorName: RedArcherV0.1
+  m_TeamID: 0
+  m_UseChildSensors: 1
+--- !u!114 &380329101767915338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6448278978668201385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85f0ef08e0c7d794bb44bd679d40f5f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
+  maxStep: 0
+  target: {fileID: 0}

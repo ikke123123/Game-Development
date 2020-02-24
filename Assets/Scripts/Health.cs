@@ -5,9 +5,7 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [SerializeField, Range(100, 6000)] private int hp = 100;
-    [SerializeField] private HealthUI healthUI = null;
-
-    [HideInInspector] public TeamHealth teamHealth;
+    [SerializeField] public HealthUI healthUI = null;
 
     [HideInInspector] public HealthData health = new HealthData();
 
@@ -15,12 +13,11 @@ public class Health : MonoBehaviour
 
     private float timer;
 
-    private void Awake()
+    public void Initiate()
     {
         health.Health = hp;
         healthUI.SetHealth(health);
         healthUI.UpdateHealth();
-        teamHealth.UpdateHealth();
     }
 
     public void TakeDamage(float amount)
@@ -28,7 +25,6 @@ public class Health : MonoBehaviour
         //Add death script thing.
         health.Damage(amount);
         healthUI.UpdateHealth();
-        teamHealth.UpdateHealth();
     }
 
     public void InitiateHeal()
@@ -41,7 +37,6 @@ public class Health : MonoBehaviour
         if (timer <= Time.time && health.Heal() == false)
         {
             healthUI.UpdateHealth();
-            teamHealth.UpdateHealth();
             timer += healSpeed;
         }
     }

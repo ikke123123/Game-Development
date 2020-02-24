@@ -26,7 +26,14 @@ public class Movement : MonoBehaviour
     public void Move(HorizontalDirection horizontal, VerticalDirection vertical, float modifier = 1)
     {
         modifier = Mathf.Clamp(modifier, 0, 1);
-        characterController.SimpleMove(DirectionToVector(horizontal, vertical) * speed);
+        characterController.SimpleMove(DirectionToVector(horizontal, vertical) * speed * modifier);
+    }
+    public void Move(Vector3 input, float modifier = 1)
+    {
+        modifier = Mathf.Clamp(modifier, 0, 1);
+        input.y = 0;
+        input = input.normalized;
+        characterController.SimpleMove(input * speed * modifier);
     }
 
     private Vector3 DirectionToVector(HorizontalDirection horizontal, VerticalDirection vertical)

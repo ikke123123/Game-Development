@@ -22,19 +22,19 @@ public class TeamHealth : MonoBehaviour
 
     private void Awake()
     {
-        teamController = GetComponent<TeamController>();
-        assassin = teamController.assassin.GetComponent<Health>().health;
-        teamController.assassin.GetComponent<Health>().teamHealth = this;
-        archer = teamController.archer.GetComponent<Health>().health;
-        teamController.archer.GetComponent<Health>().teamHealth = this;
-        tank = teamController.tank.GetComponent<Health>().health;
-        teamController.tank.GetComponent<Health>().teamHealth = this;
-        tower1 = teamController.tower1.GetComponent<Health>().health;
-        teamController.tower1.GetComponent<Health>().teamHealth = this;
-        tower2 = teamController.tower2.GetComponent<Health>().health;
-        teamController.tower2.GetComponent<Health>().teamHealth = this;
-        tower3 = teamController.tower3.GetComponent<Health>().health;
-        teamController.tower3.GetComponent<Health>().teamHealth = this;
+        //teamController = GetComponent<TeamController>();
+        //assassin = teamController.assassin.GetComponent<Health>().health;
+        //teamController.assassin.GetComponent<Health>().teamHealth = this;
+        //archer = teamController.archer.GetComponent<Health>().health;
+        //teamController.archer.GetComponent<Health>().teamHealth = this;
+        //tank = teamController.tank.GetComponent<Health>().health;
+        //teamController.tank.GetComponent<Health>().teamHealth = this;
+        //tower1 = teamController.tower1.GetComponent<Health>().health;
+        //teamController.tower1.GetComponent<Health>().teamHealth = this;
+        //tower2 = teamController.tower2.GetComponent<Health>().health;
+        //teamController.tower2.GetComponent<Health>().teamHealth = this;
+        //tower3 = teamController.tower3.GetComponent<Health>().health;
+        //teamController.tower3.GetComponent<Health>().teamHealth = this;
     }
 
     public void UpdateHealth()

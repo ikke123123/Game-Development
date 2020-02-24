@@ -14,7 +14,10 @@ GameObject:
   - component: {fileID: 4116952784093918017}
   - component: {fileID: 4095689440248439116}
   - component: {fileID: 5076409270016230021}
-  m_Layer: 0
+  - component: {fileID: 4215140715082288293}
+  - component: {fileID: 2987258063376154625}
+  - component: {fileID: -8621752228724188879}
+  m_Layer: 8
   m_Name: Red Assassin
   m_TagString: Red Player
   m_Icon: {fileID: 0}
@@ -130,3 +133,59 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 150
   healthUI: {fileID: 0}
+--- !u!114 &4215140715082288293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3826440941099350351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DecisionPeriod: 10
+  RepeatAction: 1
+  offsetStep: 0
+--- !u!114 &2987258063376154625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3826440941099350351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d1c4e0b1822b495aa52bc52839ecb30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BrainParameters:
+    vectorObservationSize: 8
+    numStackedVectorObservations: 1
+    vectorActionSize: 02000000
+    vectorActionDescriptions: []
+    vectorActionSpaceType: 1
+  m_Model: {fileID: 0}
+  m_InferenceDevice: 0
+  m_BehaviorType: 0
+  m_BehaviorName: RedAssassinV0.1
+  m_TeamID: 0
+  m_UseChildSensors: 1
+--- !u!114 &-8621752228724188879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3826440941099350351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85f0ef08e0c7d794bb44bd679d40f5f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
+  maxStep: 0
+  target: {fileID: 0}
