@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1246,7 +1246,6 @@ GameObject:
   - component: {fileID: 241946416}
   - component: {fileID: 241946415}
   - component: {fileID: 241946414}
-  - component: {fileID: 241946417}
   m_Layer: 0
   m_Name: Red Heal
   m_TagString: Heal Red
@@ -1328,19 +1327,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 241946412}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &241946417
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 241946412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d46094b6ecea50d4bb534a6c652ba07d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectTag: Red Player
 --- !u!1 &291409448
 GameObject:
   m_ObjectHideFlags: 0
@@ -2185,7 +2171,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 379966377}
-  - component: {fileID: 379966378}
   m_Layer: 0
   m_Name: Red Assassin Spawner
   m_TagString: Untagged
@@ -2207,24 +2192,6 @@ Transform:
   m_Father: {fileID: 435852838}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &379966378
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 379966376}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89dc91ab025453d4fa7ea20d83ff987f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefab: {fileID: 3826440941099350351, guid: f535cc83466437746a7c798438f3f744, type: 3}
-  healthUI: {fileID: 1158974735}
-  respawnTime: 5
-  modifier: 1.25
-  isRespawning: 0
-  timeRemaining: 0
 --- !u!1001 &386882223
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2480,14 +2447,9 @@ PrefabInstance:
       propertyPath: healthUI
       value: 
       objectReference: {fileID: 853295640}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2334378208377371801, guid: 1098a2f43e3279544aba3124a944aa0b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1098a2f43e3279544aba3124a944aa0b, type: 3}
---- !u!1 &434529623 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2217939076427936628, guid: 1098a2f43e3279544aba3124a944aa0b,
-    type: 3}
-  m_PrefabInstance: {fileID: 434529622}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &434529624 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2221217212615469276, guid: 1098a2f43e3279544aba3124a944aa0b,
@@ -2503,7 +2465,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 435852838}
-  - component: {fileID: 435852839}
   m_Layer: 0
   m_Name: Red
   m_TagString: Untagged
@@ -2532,25 +2493,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &435852839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 435852837}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 076cb1715f643524c892e94e6821fa4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  assassin: {fileID: 0}
-  archer: {fileID: 0}
-  tank: {fileID: 0}
-  tower1: {fileID: 1688846394}
-  tower2: {fileID: 434529623}
-  tower3: {fileID: 638324393}
-  team: 1
 --- !u!1 &444594589
 GameObject:
   m_ObjectHideFlags: 0
@@ -3321,14 +3263,9 @@ PrefabInstance:
       propertyPath: healthUI
       value: 
       objectReference: {fileID: 1539142132}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5225981170469137420, guid: 2d28997a744c22e4d94a9dccac4d9b39, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2d28997a744c22e4d94a9dccac4d9b39, type: 3}
---- !u!1 &638324393 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5040903056801704524, guid: 2d28997a744c22e4d94a9dccac4d9b39,
-    type: 3}
-  m_PrefabInstance: {fileID: 638324392}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &638324394 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5035033182693814756, guid: 2d28997a744c22e4d94a9dccac4d9b39,
@@ -5925,7 +5862,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1248553910}
-  - component: {fileID: 1248553911}
   m_Layer: 0
   m_Name: Red Tank Spawner
   m_TagString: Untagged
@@ -5947,24 +5883,6 @@ Transform:
   m_Father: {fileID: 435852838}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1248553911
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1248553909}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89dc91ab025453d4fa7ea20d83ff987f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefab: {fileID: 3541824639061499691, guid: 010cd1dae40542f4989f55108df3755f, type: 3}
-  healthUI: {fileID: 1001420380}
-  respawnTime: 5
-  modifier: 1.25
-  isRespawning: 0
-  timeRemaining: 0
 --- !u!1 &1339804833
 GameObject:
   m_ObjectHideFlags: 0
@@ -6995,7 +6913,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1605276635}
-  - component: {fileID: 1605276636}
   m_Layer: 0
   m_Name: Red Archer Spawner
   m_TagString: Untagged
@@ -7017,24 +6934,6 @@ Transform:
   m_Father: {fileID: 435852838}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1605276636
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1605276634}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89dc91ab025453d4fa7ea20d83ff987f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefab: {fileID: 6448278978668201385, guid: a5940083f10c07b40a41bfc5822a9483, type: 3}
-  healthUI: {fileID: 2062950766}
-  respawnTime: 5
-  modifier: 1.25
-  isRespawning: 0
-  timeRemaining: 0
 --- !u!1 &1630956580
 GameObject:
   m_ObjectHideFlags: 0
@@ -7517,14 +7416,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 66772974292316032, guid: e798948b43857af408a9b9d8391a4384, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e798948b43857af408a9b9d8391a4384, type: 3}
---- !u!1 &1688846394 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3227034528981747102, guid: e798948b43857af408a9b9d8391a4384,
-    type: 3}
-  m_PrefabInstance: {fileID: 1688846393}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1688846395 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3232546943666019894, guid: e798948b43857af408a9b9d8391a4384,

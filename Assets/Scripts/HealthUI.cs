@@ -17,7 +17,7 @@ public class HealthUI : MonoBehaviour
     private void Awake()
     {
         maxWidth = image.rectTransform.sizeDelta.x;
-        SetDeath(false);
+        //SetDeath(false);
     }
 
     public void SetHealth(HealthData input)
@@ -33,14 +33,14 @@ public class HealthUI : MonoBehaviour
         ImageUpdate();
     }
 
-    public void SetDeath(bool input)
-    {
-        deathBackground.gameObject.SetActive(input);
-    }
-    public void SetDeath(int input)
-    {
-        deathText.text = input.ToString();
-    }
+    //public void SetDeath(bool input)
+    //{
+    //    deathBackground.gameObject.SetActive(input);
+    //}
+    //public void SetDeath(int input)
+    //{
+    //    deathText.text = input.ToString();
+    //}
 
     private void TextUpdate()
     {
