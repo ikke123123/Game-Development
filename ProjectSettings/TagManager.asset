@@ -11,6 +11,8 @@ TagManager:
   - Red Player
   - Red Tower
   - Blue Tower
+  - Red
+  - Blue
   layers:
   - Default
   - TransparentFX
