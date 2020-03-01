@@ -6,6 +6,11 @@ public class Tower : MonoBehaviour
 {
     private Transform target;
 
+    //Color of Gizmos
+    public Color Red = Color.red;
+    /************************************************************/
+
+
     [Header("TowerAttributes")]
 
     public float fireRate = 1f;
@@ -20,7 +25,7 @@ public class Tower : MonoBehaviour
    
     void Start()
     {
-        InvokeRepeating("UpdateTarget", 0f, 0.5f);
+        InvokeRepeating("UpdateTarget", 0f, 0.1f);
     }
     void UpdateTarget()
     {
@@ -48,7 +53,9 @@ public class Tower : MonoBehaviour
     void Update()
     {
         if (target == null)
+        {
             return;
+        }
         if (fireCountdown <= 0)
         {
             Shoot();
@@ -58,7 +65,7 @@ public class Tower : MonoBehaviour
     }
     void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.red;
+        Gizmos.color = Red;
         Gizmos.DrawSphere(transform.position,range);
     }
 
