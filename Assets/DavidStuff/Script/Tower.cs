@@ -4,10 +4,20 @@ using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
-    public Transform target;
+    private Transform target;
+
+    [Header("TowerAttributes")]
+
+    public float fireRate = 1f;
+    private float fireCountdown = 0f;
     public float range = 8f;
 
     public string enemyTag = "Red";
+
+    public GameObject bulletPrefab;
+    public Transform firePoint;
+
+   
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
@@ -39,10 +49,26 @@ public class Tower : MonoBehaviour
     {
         if (target == null)
             return;
+        if (fireCountdown <= 0)
+        {
+            Shoot();
+            fireCountdown = 1f / fireRate;
+        }
+        fireCountdown -= Time.deltaTime;
     }
-    private void OnDrawGizmosSelected()
+    void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawSphere(transform.position,range);
+    }
+
+    void Shoot()
+    {
+       GameObject bulletGO = (GameObject)Instantiate(bulletPrefab,firePoint.position,firePoint.rotation);
+       Bullet bullet = bulletGO.GetComponent<Bullet>();
+        if (bullet != null)
+        {
+            bullet.Chase(target);
+        }
     }
 }
