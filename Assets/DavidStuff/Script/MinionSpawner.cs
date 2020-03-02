@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class MinionSpawner : MonoBehaviour
 {
-    public Transform minions;
+    public GameObject minions;
+    public Transform goal;
 
     public float timeBetweenWaves = 25f;
     private float countdown = 2f;
@@ -20,6 +21,10 @@ public class MinionSpawner : MonoBehaviour
     }
      void SpawnWave()
     {
-        Instantiate(minions);
+        GameObject temptrans = Instantiate(minions);
+        foreach (Transform transform in temptrans.GetComponentInChildren<Transform>())
+        {
+            transform.gameObject.GetComponent<moveScript>().goal = goal;
+        }
     }
 }

@@ -4,7 +4,7 @@ public class Bullet : MonoBehaviour
 {
     private Transform target;
 
-    public Transform effect;
+    public GameObject effect;
 
     public float speed = 65f;
 
@@ -34,8 +34,17 @@ public class Bullet : MonoBehaviour
 
     void HitTarget()
     {
-        Instantiate(effect, transform.position, transform.rotation);
+        GameObject clone = (GameObject)Instantiate(effect, transform.position, transform.rotation);
+        //target object
         Destroy(target.gameObject);
+        //Destroy parent of target
+        if (target.parent.childCount <= 1)
+        {
+            Destroy(target.parent.gameObject,1f);
+        }
+        //destroy bullet
         Destroy(gameObject);
+        //destroy particle effect
+        Destroy(clone,1f);
     }
 }

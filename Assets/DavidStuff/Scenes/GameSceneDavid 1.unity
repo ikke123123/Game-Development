@@ -120,7 +120,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: f5148d75ee8ac3247aaa1e4ac3939c06, type: 2}
 --- !u!1 &9153807
 GameObject:
   m_ObjectHideFlags: 0
@@ -1193,7 +1193,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d8c803ef646da445ac96dc18c25ed27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minions: {fileID: 2598539728269969398, guid: e98ed31776b2ed843bce83650cc2a740, type: 3}
+  minions: {fileID: 2598539728269969397, guid: 6749922c594214742addac1f083c7386, type: 3}
+  goal: {fileID: 1762819176}
   timeBetweenWaves: 25
 --- !u!1 &241946412
 GameObject:
@@ -2154,6 +2155,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blue 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2288882800600232813, guid: 2d5cbf62b06f45e4d972bbc4e3b94377,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2288882800600232813, guid: 2d5cbf62b06f45e4d972bbc4e3b94377,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2294395273299585221, guid: 2d5cbf62b06f45e4d972bbc4e3b94377,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2229,6 +2240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f14cc5246bd0b343a897128cd38b700, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Red: {r: 1, g: 0, b: 0, a: 0.47058824}
   fireRate: 1
   range: 8
   enemyTag: Blue
@@ -2355,6 +2367,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Red 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2217939076427936628, guid: 1098a2f43e3279544aba3124a944aa0b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2217939076427936628, guid: 1098a2f43e3279544aba3124a944aa0b,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2221217212615469276, guid: 1098a2f43e3279544aba3124a944aa0b,
         type: 3}
@@ -2594,6 +2616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f14cc5246bd0b343a897128cd38b700, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Red: {r: 1, g: 0, b: 0, a: 0.47058824}
   fireRate: 1
   range: 8
   enemyTag: Red
@@ -3034,6 +3057,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f14cc5246bd0b343a897128cd38b700, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Red: {r: 1, g: 0, b: 0, a: 0.47058824}
   fireRate: 1
   range: 8
   enemyTag: Red
@@ -3261,6 +3285,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Red 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040903056801704524, guid: 2d28997a744c22e4d94a9dccac4d9b39,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040903056801704524, guid: 2d28997a744c22e4d94a9dccac4d9b39,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5225981170469137420, guid: 2d28997a744c22e4d94a9dccac4d9b39,
         type: 3}
@@ -3960,6 +3994,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f14cc5246bd0b343a897128cd38b700, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Red: {r: 1, g: 0, b: 0, a: 0.47058824}
   fireRate: 1
   range: 8
   enemyTag: Blue
@@ -4373,8 +4408,8 @@ GameObject:
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &926125220
 Transform:
@@ -4448,7 +4483,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 995997418}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -72.6}
+  m_LocalPosition: {x: 0, y: 1.4, z: -72.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 435852838}
@@ -4466,7 +4501,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d8c803ef646da445ac96dc18c25ed27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minions: {fileID: 4656559961918362804, guid: 0a2153e6d7ca5f74ba995733a953c0af, type: 3}
+  minions: {fileID: 2598539728269969397, guid: e98ed31776b2ed843bce83650cc2a740, type: 3}
+  goal: {fileID: 1398660440}
   timeBetweenWaves: 25
 --- !u!1 &1001420378
 GameObject:
@@ -4833,6 +4869,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f14cc5246bd0b343a897128cd38b700, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Red: {r: 1, g: 0, b: 0, a: 0.47058824}
   fireRate: 1
   range: 8
   enemyTag: Blue
@@ -5007,8 +5044,8 @@ GameObject:
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &1096694516
 Transform:
@@ -6115,6 +6152,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2292976857164721363, guid: c102b167006fff747810ac0c636b446c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2292976857164721363, guid: c102b167006fff747810ac0c636b446c,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2712887243646263153, guid: c102b167006fff747810ac0c636b446c,
         type: 3}
       propertyPath: healthUI
@@ -6555,8 +6602,8 @@ GameObject:
   m_Name: 'FirePoint '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &1418058543
 Transform:
@@ -7254,8 +7301,8 @@ GameObject:
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &1651991739
 Transform:
@@ -7542,6 +7589,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Red 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3227034528981747102, guid: e798948b43857af408a9b9d8391a4384,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3227034528981747102, guid: e798948b43857af408a9b9d8391a4384,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3232546943666019894, guid: e798948b43857af408a9b9d8391a4384,
         type: 3}
@@ -8026,7 +8083,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!64 &1939133278
 MeshCollider:
@@ -8097,7 +8154,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1939133277}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0, y: 0, z: -0}
   m_LocalScale: {x: 15, y: 1, z: 2.5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -8451,6 +8508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f14cc5246bd0b343a897128cd38b700, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Red: {r: 1, g: 0, b: 0, a: 0.47058824}
   fireRate: 1
   range: 8
   enemyTag: Red
@@ -8963,8 +9021,8 @@ GameObject:
   m_Name: 'FirePoint '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &2063486895
 Transform:
@@ -8996,6 +9054,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Blue 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8647147025190542852, guid: 66a477698e8d4a64eaccf1465d43cbd0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8647147025190542852, guid: 66a477698e8d4a64eaccf1465d43cbd0,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8652607821345621420, guid: 66a477698e8d4a64eaccf1465d43cbd0,
         type: 3}
@@ -9067,8 +9135,8 @@ GameObject:
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &2128453946
 Transform:
