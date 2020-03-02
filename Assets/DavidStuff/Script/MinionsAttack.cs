@@ -2,27 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tower : MonoBehaviour
+public class MinionsAttack : MonoBehaviour
 {
     private Transform target;
 
     //Color of Gizmos
     public Color Red = Color.red;
-    /************************************************************/
-
-
-    [Header("TowerAttributes")]
-
-    public float fireRate = 1f;
-    private float fireCountdown = 0f;
-    public float range = 8f;
-
+    /***********************************************************/
+    public float range = 4f;
     public string enemyTag;
 
-    public GameObject bulletPrefab;
-    public Transform firePoint;
+    public float speed = 3.5f;
+    public GameObject effect;
 
-   
+    public float hitRate = 1f;
+    private float hitCountdown = 0f;
+
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.1f);
@@ -35,7 +30,7 @@ public class Tower : MonoBehaviour
         foreach (GameObject enemy in enemies)
         {
             float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
-            if (distanceToEnemy < shortestDistance) 
+            if (distanceToEnemy < shortestDistance)
             {
                 shortestDistance = distanceToEnemy;
                 nearestEnemy = enemy;
@@ -44,7 +39,8 @@ public class Tower : MonoBehaviour
         if (nearestEnemy != null && shortestDistance <= range)
         {
             target = nearestEnemy.transform;
-        }else
+        }
+        else
         {
             target = null;
         }
@@ -56,26 +52,29 @@ public class Tower : MonoBehaviour
         {
             return;
         }
-        if (fireCountdown <= 0)
+        Vector3 dir = target.position - transform.position;
+        float distancePerFrame = speed * Time.deltaTime;
+        transform.Translate(dir.normalized * distancePerFrame, Space.World);
+
+        if (dir.magnitude <= 1f)
         {
-            Shoot();
-            fireCountdown = 1f / fireRate;
-        }
-        fireCountdown -= Time.deltaTime;
+            if (hitCountdown <= 0)
+            {
+               HitTarget();
+                hitCountdown = 1f / hitRate;
+            }
+            hitCountdown -= Time.deltaTime;
+        }   
     }
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Red;
-        Gizmos.DrawSphere(transform.position,range);
+        Gizmos.DrawSphere(transform.position, range);
     }
 
-    void Shoot()
+    void HitTarget()
     {
-       GameObject bulletGO = (GameObject)Instantiate(bulletPrefab,firePoint.position,firePoint.rotation);
-       Bullet bullet = bulletGO.GetComponent<Bullet>();
-        if (bullet != null)
-        {
-            bullet.Chase(target);
-        }
+        //destroys all minions idk why, but it should work fine with health system I think
+        Destroy(target.gameObject);
     }
 }
