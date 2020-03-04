@@ -35,11 +35,19 @@ public class HealthUI : MonoBehaviour
 
     public void SetDeath(bool input)
     {
+<<<<<<< Updated upstream
         deathBackground.gameObject.SetActive(input);
     }
     public void SetDeath(int input)
     {
         deathText.text = input.ToString();
+=======
+        if (deathBackground != null) deathBackground.gameObject.SetActive(input);
+    }
+    public void SetDeath(int input)
+    {
+        if (deathText != null) deathText.text = input.ToString();
+>>>>>>> Stashed changes
     }
 
     private void TextUpdate()
