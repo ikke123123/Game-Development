@@ -7,7 +7,7 @@ public class MinionSpawner : MonoBehaviour
     public GameObject minions;
     public Transform goal;
 
-    public float timeBetweenWaves = 25f;
+    public float timeBetweenWaves = 28f;
     private float countdown = 2f;
 
     void Update()

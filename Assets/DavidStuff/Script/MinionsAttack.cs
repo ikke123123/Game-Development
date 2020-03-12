@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MinionsAttack : MonoBehaviour
 {
@@ -12,15 +13,22 @@ public class MinionsAttack : MonoBehaviour
     public float range = 4f;
     public string enemyTag;
 
-    public float speed = 3.5f;
+    public float speed = 4f;
     public GameObject effect;
 
     public float hitRate = 1f;
     private float hitCountdown = 0f;
 
+    public int damage;
+    public float startHealth;
+    private float health;
+
+    public Image healthBar;
+
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.1f);
+        health = startHealth;
     }
     void UpdateTarget()
     {
@@ -36,7 +44,7 @@ public class MinionsAttack : MonoBehaviour
                 nearestEnemy = enemy;
             }
         }
-        if (nearestEnemy != null && shortestDistance <= range)
+        if (nearestEnemy != null)
         {
             target = nearestEnemy.transform;
         }
@@ -60,7 +68,7 @@ public class MinionsAttack : MonoBehaviour
         {
             if (hitCountdown <= 0)
             {
-               HitTarget();
+                TakeDamage(damage);
                 hitCountdown = 1f / hitRate;
             }
             hitCountdown -= Time.deltaTime;
@@ -72,9 +80,19 @@ public class MinionsAttack : MonoBehaviour
         Gizmos.DrawSphere(transform.position, range);
     }
 
-    void HitTarget()
+    public void TakeDamage(float damage)
     {
-        //destroys all minions idk why, but it should work fine with health system I think
-        Destroy(target.gameObject);
+        health -= damage;
+        healthBar.fillAmount = health / startHealth;
+
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        Destroy(gameObject);
     }
 }

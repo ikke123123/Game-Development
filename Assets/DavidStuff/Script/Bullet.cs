@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour
     public GameObject effect;
 
     public float speed = 65f;
+    public int damage = 20;
 
     public void Chase(Transform _target)
     {
@@ -35,16 +36,19 @@ public class Bullet : MonoBehaviour
     void HitTarget()
     {
         GameObject clone = (GameObject)Instantiate(effect, transform.position, transform.rotation);
-        //target object
-        Destroy(target.gameObject);
-        //Destroy parent of target
-        if (target.parent.childCount <= 1)
-        {
-            Destroy(target.parent.gameObject,1f);
-        }
         //destroy bullet
         Destroy(gameObject);
         //destroy particle effect
         Destroy(clone,1f);
+        Damage(target);
+    }
+    void Damage(Transform enemy)
+    {
+        MinionsAttack e = enemy.GetComponent<MinionsAttack>();
+
+        if (e != null)
+        {
+            e.TakeDamage(damage);
+        }
     }
 }
